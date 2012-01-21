@@ -3,7 +3,7 @@ class SenchaTouch::TasksController < ApplicationController
   layout 'sencha_touch'
 
   def index
-    @tasks = Task.scoped#.order('done ASC, updated_at DESC')
+    @tasks = Task.scoped
 
     respond_to do |f|
       f.html
