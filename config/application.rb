@@ -45,6 +45,6 @@ module JQueryMobile
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.assets.precompile += ['sencha_touch.js', 'jquery_mobile.js']
+    config.assets.precompile += ['sencha_touch.js', 'sencha_touch.css', 'jquery_mobile.css', 'jquery_mobile.js']
   end
 end
