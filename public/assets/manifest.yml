@@ -6,6 +6,8 @@ icons-36-black.png: icons-36-black-2b6cf70d6a985a3be236d5da640d1c30.png
 icons-36-white.png: icons-36-white-e1dfa3968cff344e8e23b6afde176038.png
 rails.png: rails-e4b51606cd77fda2615e7439907bfc92.png
 application.js: application-6728c025b1babaf8d0ee37d4e69971dd.js
+jquery_mobile.js: jquery_mobile-ac7055ca336ea3c83461779319427910.js
+sencha_touch.js: sencha_touch-d394546a897f81846271acb70bc45169.js
 application.css: application-1c9609bc58b1e77c196de29021583379.css
 active_admin/admin_notes_icon.png: active_admin/admin_notes_icon-d3076b67b8655afc5cf14bf244c34db5.png
 active_admin/datepicker/datepicker-header-bg.png: active_admin/datepicker/datepicker-header-bg-c73514e723fd274903d96ff0afd8e7f7.png
