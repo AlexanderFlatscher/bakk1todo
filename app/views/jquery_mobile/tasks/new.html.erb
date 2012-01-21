@@ -1,0 +1,7 @@
+<% content_for :pageID do %>newPage<% end %>
+
+<%= form_for @task, {:url => jquery_mobile_tasks_path} do |f| %>
+	<%= f.label :body %>
+	<%= f.text_area :body %>
+	<%= f.submit "Erstellen" %>
+<% end %>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
+  <title>jQuery Mobile Layout</title>
+  <%= stylesheet_link_tag    "jquery_mobile" %>
+  <%= javascript_include_tag "jquery_mobile" %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <section data-role="page" id="<%= yield :pageID %>">
+    <header data-role="header">
+      <h1>ToDo</h1>
+
+      <%= link_to 'Neu', new_jquery_mobile_task_path, 'data-role' => 'button', 'data-icon' => 'plus', :class => 'ui-btn-right' %>
+
+      <nav data-role="navbar">
+        <ul>
+          <li>
+            <%= link_to 'Alle', jquery_mobile_tasks_path, :class => 'indexPage' %></a>
+          </li>
+          <li>
+            <%= link_to 'Offen', jquery_mobile_tasks_path(:state => 'undone'), :class => 'undonePage' %>
+          </li>
+          <li>
+            <%= link_to 'Erledigt', jquery_mobile_tasks_path(:state => 'done'), :class => 'donePage' %>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div data-role="content">
+      <%= yield %>
+    </div>
+  </section>
+
+  <!-- error dialog -->
+  <section data-role="page" id="errorDialog">
+    <header data-role="header"><h1>Fehler</h1></header>
+    <div data-role="content">
+      <p>Ein Fehler ist aufgetreten!</p>
+      <a href="#" data-role="button" data-rel="back">OK</a>
+    </div>
+  </section>
+
+  <a href="#errorDialog" id="showErrorDialog" data-rel="dialog" data-transition="slidedown" style="display: none;">Fehler Seite</a>
+
+</body>
+</html>

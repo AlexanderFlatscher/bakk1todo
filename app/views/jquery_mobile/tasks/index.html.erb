@@ -1,0 +1,23 @@
+<% if params[:state] == 'done' %>
+  <% page_id = 'donePage' %>
+<% elsif params[:state] == 'undone' %>
+  <% page_id = 'undonePage' %>
+<% else %>
+  <% page_id = 'indexPage' %>
+<% end %>
+
+
+<% content_for :pageID do %><%= page_id %><% end %>
+
+<ul data-role="listview">
+	<% @tasks.each do |task| %>
+		<li class="<%= 'done' if task.done %>" data-taskid="<%= task.id %>">
+			<%= link_to task.body, '#' %>
+			<% if task.done %>
+				<%= link_to 'Löschen', jquery_mobile_task_path(task), :method => :delete, 'data-icon' => 'delete', 'data-theme' => 'c', :class => 'delete' %>
+			<% else %>
+				<%= link_to 'Bearbeiten', edit_jquery_mobile_task_path(task), 'data-icon' => 'gear', 'data-theme' => 'c' %>
+			<% end %>
+		</li>
+	<% end %>
+</ul>

@@ -1,0 +1,7 @@
+<% content_for :pageID do %>editPage<% end %>
+
+<%= form_for @task, {:url => jquery_mobile_task_path(@task.id)} do |f| %>
+	<%= f.label :body %>
+	<%= f.text_area :body %>
+	<%= f.submit "Ändern" %>
+<% end %>
