@@ -25,7 +25,10 @@ Ext.regApplication({
 	},
 
 	testPerformance: function(){
+		var start = new Date().getMilliseconds();
 		Ext.StoreMgr.get('Tasks').add(App.testPreparations);
+		var stop = new Date().getMilliseconds();
+		console.log(start - stop);
 	}
 	
 });

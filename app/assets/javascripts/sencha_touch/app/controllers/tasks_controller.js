@@ -31,6 +31,7 @@ Ext.regController('Tasks', {
 			});
 		}
 
+		this.newView.reset();
 		this.application.viewport.setView(this.newView, options.animation);
 	},
 

@@ -120,5 +120,9 @@ $.preparePerformanceTest = function(count){
 }
 
 $.testPerformance = function(){
-	$($('.ui-listview')[0]).append($.testPreparations).listview('refresh');
+	var start = new Date().getMilliseconds();
+	$($('.ui-listview')[0]).append($.testPreparations)//.listview('refresh');
+	var stop = new Date().getMilliseconds();
+
+	console.log(stop - start);
 }
